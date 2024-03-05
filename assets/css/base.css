@@ -1,0 +1,217 @@
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+    --primary-color:#EE4D2D;
+    --border-color:#dbdbdb;
+    --star-gold-color:#ffce3d;
+    --navbar-height:34px;
+    --header-height:120px;
+    --header-sort-bar-height:46px;
+    --header-with-search-height:calc(var(--header-height) - var(--navbar-height));
+}
+*{
+    box-sizing: inherit;
+}
+
+html{
+    /* 16px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+p{
+    font-size:1.6rem;
+
+}
+body{
+    margin: 0;
+}
+/* icon */
+.icon-down{
+    font-size: 1.4rem;
+    color: #666;
+    margin: 0 16px 0 8px;
+}
+/* responsive */ 
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+
+.grid-center{
+    display: flex;
+    justify-content: center;
+}
+
+/* animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes hiddenNotify{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes Growth{
+    from{
+        transform: scale(var(--grow-from));
+    }
+    to{
+        transform: scale(var(--grow-to));
+    }
+}
+/* MODAL */
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    animation: fadeIn linear 0.1s;
+
+}
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+.modal__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    --grow-from:0.7;
+    --grow-to:1;
+    margin:auto;
+    animation: Growth linear 0.1s ;
+}   
+.social-white-fb-blue-png{
+    background-size: 325% 287.5%;
+    background-position: 5.555555555555555% 62.666666666666664%;
+}
+
+.social-white-google-png {
+    background-size: 722.2222222222222% 638.8888888888889%;
+    background-position: 83.92857142857143% 5.154639175257732%;
+}
+.social-white-background{
+    background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/7b95007f3377150730bbb5d1ddb477d6.png);
+}
+.icon-link{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+/* button style */
+.btn{
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: #fff;
+}
+.btn:hover{
+    background-color:rgba(0,0,0,0.1) ;
+}
+.btn.btn-primary{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.btn.btn--disable{
+    color:#949494  ;
+    cursor: default;
+    background-color: #c3c3c3;
+}
+.auth-text{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+.auth-text .auth-text-crossbar{
+    height: 1px;
+    width: 50%;
+    background-color: #dbdbdb;
+    flex:1;
+}
+.auth-text-crossbar-text{
+    color: #ccc;
+    padding: 0 16px;
+    text-transform: uppercase;
+    font-size: 1.4rem
+}
+.color_green{
+    color: rgb(42, 202, 42);
+}
+/* selection */
+.select-input {
+    position: relative;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.select-input:hover .select-input-list{
+    display: block;
+}
+/* pagination */
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination-item{
+    list-style-type: none;
+    margin: 0px 14px;
+}
+.pagination-link{
+    --height:30px;
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 300;
+    min-width: 40px;
+    height: var(--height);
+    color: #939393;
+    text-align: center;
+    line-height: var(--height);
+}
+.pagination-item--active .pagination-link{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 2px;
+}
+.pagination-item--active .pagination-link:hover{
+    background-color: #ef6e55;
+}
+
+.footer__border-top{
+    border-top: 4px solid var(--primary-color);
+}
